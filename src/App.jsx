@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
@@ -9,111 +7,76 @@ function App() {
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+      {/* Navbar */}
+      <nav className="navbar">
+        <h2>Resham Kumar Thapa</h2>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-text">
+          <h1>Hello, I'm Resham 👋</h1>
+          <p>BIT Student | MERN Stack Developer | Passionate Learner</p>
+          <button className="btn">Download CV</button>
         </div>
-        <div>
-          <h1>Resham Kumar Thapa</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+        <div className="hero-image">
+          <img src={heroImg} alt="Profile" />
         </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
+      </section>
+
+      {/* About Section */}
+      <section className="about">
+        <h2>About Me</h2>
+        <p>
+          I am a Bachelor of Information Technology student with skills in HTML,
+          CSS, JavaScript, React, Node.js, and MongoDB. I enjoy building modern
+          web applications and solving real-world problems.
+        </p>
+      </section>
+
+      {/* Counter Section */}
+      <section className="counter-section">
+        <h2>Fun Counter</h2>
+        <button onClick={() => setCount(count + 1)}>
           Count is {count}
         </button>
       </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+      {/* Projects Section */}
+      <section className="projects">
+        <h2>My Projects</h2>
+        <div className="project-cards">
+          <div className="card">
+            <h3>Student Reminder App</h3>
+            <p>Android app for managing assignments and reminders.</p>
+          </div>
+          <div className="card">
+            <h3>Bakery Management System</h3>
+            <p>MERN stack project for managing bakery operations.</p>
+          </div>
+          <div className="card">
+            <h3>Tourism Website</h3>
+            <p>Responsive website showcasing tourism in Karnali.</p>
+          </div>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      {/* Contact Section */}
+      <section className="contact">
+        <h2>Contact Me</h2>
+        <p>Email: resham@example.com</p>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>© 2026 Resham Kumar Thapa. All rights reserved.</p>
+      </footer>
     </>
   )
 }
